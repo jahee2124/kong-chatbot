@@ -47,12 +47,12 @@ class General(commands.Cog):
             "   !도움  - 이 도움말을 보여줍니다.\n"
             "   !따라해 [할말] - 콩이가 [할말]을 따라합니다.\n"
             "**CatCommands**\n"
-            "   !nyan/냥 - :rainbow_flag:\n"
+            "   !nyan/냥 - :rainbow_flag::cat: \n"
             "   !돌아 - 콩이가 돕니다.\n"
-            "   !빵/빵야 - :gun: BANG.\n"
+            "   !빵/빵야 - :gun:\n"
             "   !손/발 - :feet:\n"
             "   !앉아 - 콩이가 앉습니다.\n"
-            "   !오예 - :dancer: :musical_note: :man_dancing:\n"
+            "   !오예 - :dancer: 콩이가 춤을 추게 합니다 :man_dancing:\n"
             "   !콩아/울어 - 콩이를 부릅니다.\n"
         )
         await ctx.send(help_message)
