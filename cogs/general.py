@@ -35,17 +35,25 @@ class General(commands.Cog):
     @commands.command(name='도움')
     async def help_command(self, ctx):
         help_message = (
-            "!도움 - 이 도움말을 보여줍니다.\n"
-            "!안녕 - 인사합니다.\n"
-            "!따라해 [할말] - 봇이 [할말]을 따라합니다.\n"
-            "!8ball/8볼 [질문] - 질문에 대답합니다.\n"
-            "!콩아/울어 - 콩이를 부릅니다.\n"
-            "!손/발 - :feet:\n"
-            "!돌아 - 콩이가 돕니다.\n"
-            "!빵/빵야 - :gun: BANG.\n"
-            "!앉아 - 콩이가 앉습니다.\n"
-            "!오예 - :dancer: :musical_note: :man_dancing:\n"
-            "!nyan/냥 - :rainbow_flag:\n"
+            "   !help\n"
+            "**ChatBot**\n"
+            "   @mention [메세지] - 콩이와 대화합니다.\n"
+            "   !페르소나/persona 현재 설정된 봇의 페르소나 설명을 보여줍니다.\n"
+            "   !페르소나설정/set _ persona - 봇의 페르소나를 설정합니다. 기존 대화는 초기화해야 합니다.\n"
+            "   !대화초기화/clear_chat - 현재 채널의 대화 기록을 초기화하고 새 페르소나를 적용합니다.\n"
+            "**General**\n"
+            "   !8ball/8볼 [질문] - 질문에 대답합니다.\n"
+            "   !안녕 - 인사합니다.\n"
+            "   !도움  - 이 도움말을 보여줍니다.\n"
+            "   !따라해 [할말] - 콩이가 [할말]을 따라합니다.\n"
+            "**CatCommands**\n"
+            "   !nyan/냥 - :rainbow_flag:\n"
+            "   !돌아 - 콩이가 돕니다.\n"
+            "   !빵/빵야 - :gun: BANG.\n"
+            "   !손/발 - :feet:\n"
+            "   !앉아 - 콩이가 앉습니다.\n"
+            "   !오예 - :dancer: :musical_note: :man_dancing:\n"
+            "   !콩아/울어 - 콩이를 부릅니다.\n"
         )
         await ctx.send(help_message)
 

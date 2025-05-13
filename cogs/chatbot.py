@@ -168,7 +168,7 @@ class ChatBot(commands.Cog):
         
         await ctx.reply(f"{action_message}\n모든 채널의 기존 대화가 초기화되어 새 페르소나가 다음 대화부터 적용됩니다. (초기화된 대화 수: {cleared_channels})")
 
-    @commands.command(name="현재페르소나", aliases=["get_persona", "show_persona"])
+    @commands.command(name="페르소나", aliases=["persona"])
     async def show_current_persona(self, ctx: commands.Context):
         """현재 설정된 봇의 페르소나 설명을 보여줍니다."""
         if not self.gemini_ready:
@@ -179,7 +179,7 @@ class ChatBot(commands.Cog):
         embed = discord.Embed(title="🤖 현재 봇 페르소나", description=f"```\n{persona_to_show}\n```", color=discord.Color.blue())
         await ctx.send(embed=embed)
 
-    @commands.command(name="대화초기화", aliases=["reset_chat", "clear_chat"])
+    @commands.command(name="대화초기화", aliases=["clear_chat"])
     @commands.cooldown(1, 10, commands.BucketType.channel) # 채널당 10초에 한 번
     async def reset_channel_conversation(self, ctx: commands.Context):
         """현재 채널의 Gemini 대화 기록을 초기화하고 새 페르소나를 적용합니다."""
