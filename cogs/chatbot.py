@@ -87,7 +87,7 @@ class ChatBot(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
-        if not self.gemini_ready or message.author == self.bot.user or message.author.bot:
+        if not self.gemini_ready or message.author == self.bot.user:
             return
 
         if self.bot.user.mentioned_in(message):
